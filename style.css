@@ -1,0 +1,182 @@
+body{margin:0;margin-bottom:45px;padding:0;font-family: sans-serif;background-color:#fff;}
+html, #main { background-color: #ffffff; }
+
+#mainNav {
+    background-color: #f7f7f7;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 10px 20px;
+	min-height: 57px;
+}
+
+#mainNav * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-form {
+	text-align: right;
+	display: block;
+}
+
+#mainNav img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+#mainNav h1 {
+	margin-right: 15px;
+	font-size: 30px;
+	line-height: 30px;
+	vertical-align: text-top;
+}
+
+#details {
+    margin: 8px 0;
+}
+
+#details input {
+	width: 150px;
+	height: 30px;
+	padding: 0 5px;
+}
+
+#details input[type="submit"] {
+	width: 80px;
+	padding: 0;
+}
+
+#hide {
+	display: none;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 5px;
+}
+
+#save {padding: 0 5px;}
+
+#main {
+    padding: 20px;
+	clear: both;
+}
+
+.info {
+	margin: 0 0 10px 0;
+	display: none;
+}
+
+#details-info {display: block;}
+#email-info {color: green;}
+
+#main h2 {padding-top: 0;}
+
+#question { margin-bottom: 50px; }
+
+.option {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.option label {
+	cursor: pointer;
+	display: inline-block;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    width: 120px;
+    text-align: center;
+}
+
+.option input {display: none;}
+
+.option label:hover {
+    background-color: #afafaf;
+}
+
+.option.checked label {
+    background-color: #afafaf;
+}
+
+#best {display: none;}
+
+.best {
+    border: 3px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.best * {margin: 0;}
+
+.best .score {margin-top: 5px;}
+
+#all-scores {list-style-type: none;}
+
+footer {
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+footer button {
+    width: 50%;
+    height: 100%;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+}
+footer button:hover {
+    background-color: #afafaf;
+}
+footer button:first-child{border-right: 1px solid black;}
+
+@media only screen and (max-width: 780px) {
+    #details {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .option {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+	.option label {
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	#details {width: 100%;}
+    #details input, #details input[type="submit"] {
+        display: block;
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 5px;
+    }
+	#details.hide {display: none;}
+	#hide.show {display: inline-block;}
+}
+
+#details, #hide, #details-info {display: none;}
+#details-info[data-wanted = "checked"] {display: block;}
+#nav-head[data-wanted = "checked"] {float: left;}
+#details[data-wanted = "checked"] { display: inline-block; }
+@media only screen and (max-width: 450px) {
+	#hide[data-wanted = "checked"].show {display: inline-block;}
+	#details[data-wanted = "checked"].hide { display: none; }
+}
+
+@media only screen and (max-width: 800px) {
+	#mainNav #nav-form {
+		text-align: left;
+	}
+	#mainNav #nav-head {
+		float: none;
+	}
+}
